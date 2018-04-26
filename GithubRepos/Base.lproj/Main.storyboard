@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RGL-Va-ZP2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoCellId" rowHeight="59" id="aPa-Qm-AKH" customClass="RepoCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aPa-Qm-AKH" id="Ldp-mK-MAA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBM-YF-Vj4">
+                                                    <rect key="frame" x="15" y="11" width="345" height="37"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YBM-YF-Vj4" firstAttribute="bottom" secondItem="Ldp-mK-MAA" secondAttribute="bottomMargin" id="Aq8-2b-nKG"/>
+                                                <constraint firstItem="YBM-YF-Vj4" firstAttribute="centerX" secondItem="Ldp-mK-MAA" secondAttribute="centerX" id="JP5-lF-aLN"/>
+                                                <constraint firstItem="YBM-YF-Vj4" firstAttribute="top" secondItem="Ldp-mK-MAA" secondAttribute="topMargin" id="Rtj-nD-bit"/>
+                                                <constraint firstItem="YBM-YF-Vj4" firstAttribute="leading" secondItem="Ldp-mK-MAA" secondAttribute="leadingMargin" id="TMV-G7-m1W"/>
+                                                <constraint firstItem="YBM-YF-Vj4" firstAttribute="centerY" secondItem="Ldp-mK-MAA" secondAttribute="centerY" id="lTY-j1-auI"/>
+                                                <constraint firstItem="YBM-YF-Vj4" firstAttribute="trailing" secondItem="Ldp-mK-MAA" secondAttribute="trailingMargin" id="xN5-cR-5vh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="repoNameLabel" destination="YBM-YF-Vj4" id="rLv-FN-u0V"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xmd-Gw-6bc"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ACs-DH-0iK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RGL-Va-ZP2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UAt-oH-Gtv"/>
+                            <constraint firstItem="RGL-Va-ZP2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bKF-Fo-bQI"/>
+                            <constraint firstItem="RGL-Va-ZP2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gMI-xK-BmN"/>
+                            <constraint firstItem="RGL-Va-ZP2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uMW-xr-4qt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="RGL-Va-ZP2" id="osy-VP-TRY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="103.89805097451276"/>
+        </scene>
+    </scenes>
+</document>
